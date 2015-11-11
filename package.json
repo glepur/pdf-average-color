@@ -1,0 +1,11 @@
+{
+  "name": "PDFAverageRGB",
+  "version": "1.0.0",
+  "description": "Script for calculating average color on PDF document.",
+  "main": "index.js",
+  "author": "glepur",
+  "license": "MIT",
+  "dependencies": {
+    "pdfjs-dist": "^1.2.93"
+  }
+}

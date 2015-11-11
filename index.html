@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PDF Average Color</title>
+    <meta name="description" content="PDF Average Color">
+    <meta name="author" content="glepur">
+    <style type="text/css">
+        * { padding: 0; margin: 0; }
+        html, body { width: 100%; height: 100%; }
+        #Canvas { border: 1px solid black; }
+    </style>
+
+    <canvas id="Canvas" ></canvas>
+
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="/node_modules/pdfjs-dist/build/pdf.js"></script>
+<script type="text/javascript" src="/src/PDFAverageRGB.js"></script>
+<script>
+
+    var options = {
+        canvas: document.getElementById("Canvas"),
+        sampling: 5000
+    };
+
+    var rgb = PDFAverageRGB("test.pdf", function (rgb) {
+        document.body.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';        
+    }, options);
+
+</script>
+</html>
